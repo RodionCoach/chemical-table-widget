@@ -4,7 +4,13 @@ window.addEventListener("DOMContentLoaded", () => {
       .register(`service-worker.js`, {
         scope: `/${
           process.env.NODE_ENV === "production"
-            ? location.pathname.substring(1, location.pathname.length - 11)
+            ? location.pathname.split("/")?.reduce((acc, path) => {
+                if (!!path && path !== "index.html") {
+                  return `${acc}${path}/`;
+                }
+
+                return acc;
+              }, "/")
             : process.env.WIDGET_PATH
         }/`,
       })
