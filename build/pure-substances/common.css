@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Tisa-Sans-Pro-Regular";
+  src: url(./fonts/TisaSansPro-Regular.ttf);
+}
+
+#cycle-wrapper {
+  width: 640px;
+  height: 460px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+svg {
+  position: absolute;
+}
