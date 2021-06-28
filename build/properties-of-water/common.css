@@ -8,7 +8,7 @@
   src: url(./fonts/TisaSansPro-Bold.ttf);
 }
 
-#cycle-wrapper {
+.cycle-wrapper {
   width: 640px;
   height: 460px;
   margin: 0 auto;
@@ -27,4 +27,63 @@
 
 svg {
   position: absolute;
+}
+
+polyline {
+  cursor: pointer;
+  fill: rgba(120, 226, 196, 0);
+}
+
+.point:hover polyline {
+  fill: rgba(120, 226, 196, 0.26);
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 26px;
+    left: 26px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 52px;
+    height: 52px;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
